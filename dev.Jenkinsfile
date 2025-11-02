@@ -3,14 +3,14 @@ pipeline {
 
     environment {
         GITHUB_REPO = 'https://github.com/manishk169/nginx.git'
-        BRANCH_NAME = params.BRANCH_NAME // Branch to deploy from
+        BRANCH = 'main' // Branch to deploy from
     }
 
     stages {
         stage('Checkout Source Code') {
             steps {
                 // Correct syntax for git step (no 'script' block needed)
-                git branch: "${BRANCH_NAME}", url: "${GITHUB_REPO}"
+                git branch: "${BRANCH}", url: "${GITHUB_REPO}"
             }
         }
         

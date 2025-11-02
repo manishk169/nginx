@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         GITHUB_REPO = 'https://github.com/manishk169/nginx.git'
-        BRANCH_NAME = 'main' // Branch to deploy from
+        BRANCH_NAME = 'dev' // Branch to deploy from
     }
 
     stages {
